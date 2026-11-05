@@ -1,0 +1,10 @@
+Objet : ma facture de mars
+
+Bonjour,
+voici le détail de ma facture de mars 2026 (émise le 31/03/2026).
+
+Studio Lemaire (TVA FR33 112 233 445)
+Développement du module d'export : 6 jours x 520 EUR = 3 120 EUR HT
+
+Paiement à 30 jours. Cordialement,
+Paul Lemaire

@@ -1,0 +1,11 @@
+De : facturation@maintenance-dubois.example
+Objet : Facture LOG-0099 - maintenance mars
+
+Bonjour,
+Ci-joint la facture LOG-0099 du 15/03/2026.
+
+Maintenance Dubois SAS - TVA FR55443322110
+Maintenance applicative de mars : 1 x 780,00 EUR
+Total HT : 780,00 EUR
+
+Règlement : à réception, ou au plus tard sous 45 jours selon votre cycle de paiement.

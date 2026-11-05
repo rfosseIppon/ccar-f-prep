@@ -1,0 +1,17 @@
+ATELIER DUPONT SARL
+12 rue des Forges - 69003 Lyon
+SIRET 123 456 789 00012 - TVA intracom. FR12345678901
+
+FACTURE N° F-2026-0412
+Date d'émission : 12/03/2026
+Client : Ippon Technologies SA
+
+Désignation                        Qté   PU HT      Montant HT
+Support de formation Claude          3   200,00         600,00
+Atelier sur site (demi-journée)      2   330,00         660,00
+
+Total HT                                              1 260,00 EUR
+TVA 20 %                                                252,00 EUR
+Total TTC                                             1 512,00 EUR
+
+Conditions de règlement : paiement à 30 jours.

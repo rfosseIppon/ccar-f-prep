@@ -1,0 +1,9 @@
+SOCIETE  GARNIER-LOGISTIQUE
+FACTURE  G/2026/311        du 20/03/2026
+TVA FR77 665 544 332
+
+Transport palettes        2 x 310,00       620,00
+Stockage mars             1 x 330,00       330,00
+
+Total HT      980,00 EUR
+Paiement 30 jours

@@ -1,0 +1,239 @@
+{
+  "doc_01": {
+    "supplier_name": "Atelier Dupont SARL",
+    "invoice_number": "F-2026-0412",
+    "invoice_date": "2026-03-12",
+    "currency": "EUR",
+    "vat_number": "FR12345678901",
+    "payment_terms": "net_30",
+    "stated_total": 1260.0,
+    "segment": "pdf_text",
+    "line_items": [
+      {
+        "description": "Support de formation Claude",
+        "quantity": 3,
+        "unit_price": 200.0,
+        "amount": 600.0
+      },
+      {
+        "description": "Atelier sur site (demi-journée)",
+        "quantity": 2,
+        "unit_price": 330.0,
+        "amount": 660.0
+      }
+    ],
+    "lines_total": 1260.0,
+    "conflict_detected": false
+  },
+  "doc_02": {
+    "supplier_name": "Northwind Cloud LLC",
+    "invoice_number": "INV-88231",
+    "invoice_date": "2026-03-05",
+    "currency": "USD",
+    "vat_number": "IE1234567T",
+    "payment_terms": "net_30",
+    "stated_total": 6000.0,
+    "segment": "pdf_text",
+    "line_items": [
+      {
+        "description": "API credits (Q1)",
+        "quantity": 1,
+        "unit_price": 4500.0,
+        "amount": 4500.0
+      },
+      {
+        "description": "Premium support plan",
+        "quantity": 1,
+        "unit_price": 1500.0,
+        "amount": 1500.0
+      }
+    ],
+    "lines_total": 6000.0,
+    "conflict_detected": false
+  },
+  "doc_03": {
+    "supplier_name": "SARL Boulanger & Fils",
+    "invoice_number": "2026/118",
+    "invoice_date": "2026-02-28",
+    "currency": "EUR",
+    "vat_number": "FR98765432109",
+    "payment_terms": "net_60",
+    "stated_total": 2089.5,
+    "segment": "pdf_text",
+    "line_items": [
+      {
+        "description": "Prestation de nettoyage (février)",
+        "quantity": 1,
+        "unit_price": 1840.5,
+        "amount": 1840.5
+      },
+      {
+        "description": "Fournitures",
+        "quantity": 4,
+        "unit_price": 62.25,
+        "amount": 249.0
+      }
+    ],
+    "lines_total": 2089.5,
+    "conflict_detected": false
+  },
+  "doc_04": {
+    "supplier_name": "Julie Martin",
+    "invoice_number": "JM-2026-07",
+    "invoice_date": "2026-04-02",
+    "currency": "EUR",
+    "vat_number": null,
+    "payment_terms": "on_receipt",
+    "stated_total": 2250.0,
+    "segment": "email",
+    "line_items": [
+      {
+        "description": "Mission de conseil",
+        "quantity": 5,
+        "unit_price": 450.0,
+        "amount": 2250.0
+      }
+    ],
+    "lines_total": 2250.0,
+    "conflict_detected": false,
+    "note": "Champ réellement absent : numéro de TVA (franchise en base)."
+  },
+  "doc_05": {
+    "supplier_name": "Harbour Design Ltd",
+    "invoice_number": "HD-5521",
+    "invoice_date": "2026-05-04",
+    "currency": "GBP",
+    "vat_number": "GB123456789",
+    "payment_terms": "net_30",
+    "stated_total": 2850.0,
+    "segment": "pdf_text",
+    "line_items": [
+      {
+        "description": "Design sprint (3 days)",
+        "quantity": 3,
+        "unit_price": 950.0,
+        "amount": 2850.0
+      }
+    ],
+    "lines_total": 2850.0,
+    "conflict_detected": false,
+    "note": "Valeur ambiguë : 04/05/2026 se lit 4 mai (usage britannique) ou 5 avril. Réponse attendue : 2026-05-04, car le fournisseur est britannique."
+  },
+  "doc_06": {
+    "supplier_name": "Maintenance Dubois SAS",
+    "invoice_number": "LOG-0099",
+    "invoice_date": "2026-03-15",
+    "currency": "EUR",
+    "vat_number": "FR55443322110",
+    "payment_terms": "other",
+    "stated_total": 780.0,
+    "segment": "email",
+    "line_items": [
+      {
+        "description": "Maintenance applicative de mars",
+        "quantity": 1,
+        "unit_price": 780.0,
+        "amount": 780.0
+      }
+    ],
+    "lines_total": 780.0,
+    "conflict_detected": false,
+    "note": "Valeur ambiguë : conditions de paiement qui ne se réduisent à aucune valeur de la liste. Réponse attendue : other, avec le détail."
+  },
+  "doc_07": {
+    "supplier_name": "Dupuis Électricité SARL",
+    "invoice_number": "2026-0731",
+    "invoice_date": null,
+    "currency": "EUR",
+    "vat_number": "FR11222333444",
+    "payment_terms": "net_30",
+    "stated_total": 1590.0,
+    "segment": "scan_noisy",
+    "line_items": [
+      {
+        "description": "Câblage armoire",
+        "quantity": 1,
+        "unit_price": 1150.0,
+        "amount": 1150.0
+      },
+      {
+        "description": "Main d'oeuvre (8 h)",
+        "quantity": 8,
+        "unit_price": 55.0,
+        "amount": 440.0
+      }
+    ],
+    "lines_total": 1590.0,
+    "conflict_detected": false,
+    "note": "Champ réellement absent : la date est en pointillés. Scan bruité : « 1 59O,OO » se lit 1 590,00."
+  },
+  "doc_08": {
+    "supplier_name": "Société Garnier-Logistique",
+    "invoice_number": "G/2026/311",
+    "invoice_date": "2026-03-20",
+    "currency": "EUR",
+    "vat_number": "FR77665544332",
+    "payment_terms": "net_30",
+    "stated_total": 980.0,
+    "segment": "scan_noisy",
+    "line_items": [
+      {
+        "description": "Transport palettes",
+        "quantity": 2,
+        "unit_price": 310.0,
+        "amount": 620.0
+      },
+      {
+        "description": "Stockage mars",
+        "quantity": 1,
+        "unit_price": 330.0,
+        "amount": 330.0
+      }
+    ],
+    "lines_total": 950.0,
+    "conflict_detected": true,
+    "note": "Incohérence dans le document : les lignes totalisent 950,00 alors que le total écrit est 980,00."
+  },
+  "doc_09": {
+    "supplier_name": "Studio Lemaire",
+    "invoice_number": null,
+    "invoice_date": "2026-03-31",
+    "currency": "EUR",
+    "vat_number": "FR33112233445",
+    "payment_terms": "net_30",
+    "stated_total": 3120.0,
+    "segment": "email",
+    "line_items": [
+      {
+        "description": "Développement du module d'export",
+        "quantity": 6,
+        "unit_price": 520.0,
+        "amount": 3120.0
+      }
+    ],
+    "lines_total": 3120.0,
+    "conflict_detected": false,
+    "note": "Champ réellement absent : numéro de facture."
+  },
+  "doc_10": {
+    "supplier_name": "Alpine Data AG",
+    "invoice_number": "2026-A-57",
+    "invoice_date": "2026-03-27",
+    "currency": "other",
+    "vat_number": "CHE-123.456.789",
+    "payment_terms": "net_30",
+    "stated_total": 2160.0,
+    "segment": "pdf_text",
+    "line_items": [
+      {
+        "description": "Beratung Datenplattform",
+        "quantity": 12,
+        "unit_price": 180.0,
+        "amount": 2160.0
+      }
+    ],
+    "lines_total": 2160.0,
+    "conflict_detected": false,
+    "note": "Devise hors liste : CHF, à renseigner dans currency_detail."
+  }
+}

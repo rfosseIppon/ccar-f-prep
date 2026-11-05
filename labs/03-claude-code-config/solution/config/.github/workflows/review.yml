@@ -1,0 +1,25 @@
+name: Revue Claude de la pull request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: pip install jsonschema
+      - name: Revue
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: git diff "origin/${{ github.base_ref }}...HEAD" | python ci_review.py

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "shop": {
+      "type": "stdio",
+      "command": "python3",
+      "args": ["shop_server.py"],
+      "env": {
+        "SHOP_LOG_LEVEL": "${SHOP_LOG_LEVEL:-INFO}",
+        "SHOP_API_KEY": "${SHOP_API_KEY:-demo-key}"
+      }
+    }
+  }
+}

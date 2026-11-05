@@ -1,0 +1,43 @@
+name: Tests des labs
+
+# Pour les mainteneurs du dépôt. Les apprenants travaillent dans starter/ et n'ont pas besoin de ce workflow :
+# sur leur copie, les tests du starter échouent tant que l'exercice n'est pas fait.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  solutions:
+    name: Corrigés (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Tests sur les corrigés, sans clé API
+        env:
+          LAB_TARGET: solution
+        run: python -m pytest labs -q
+
+  starters:
+    name: Starters toujours incomplets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Seuls les tests d'intégrité passent sur les starters
+        run: python tools/check_starters.py

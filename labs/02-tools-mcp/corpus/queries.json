@@ -1,0 +1,102 @@
+[
+ {
+  "id": "q01",
+  "query": "Où en est la commande CMD-10002 de marie@example.com ?",
+  "expected": "lookup_order"
+ },
+ {
+  "id": "q02",
+  "query": "Je suis paul@example.com, peux-tu me dire ce que contient CMD-10003 ?",
+  "expected": "lookup_order"
+ },
+ {
+  "id": "q03",
+  "query": "Détail de CMD-10001 pour marie@example.com, je veux le total payé.",
+  "expected": "lookup_order"
+ },
+ {
+  "id": "q04",
+  "query": "Le client lea@example.com demande la commande CMD-10005 : elle existe encore ?",
+  "expected": "lookup_order"
+ },
+ {
+  "id": "q05",
+  "query": "Statut exact de la commande CMD-10004 pour paul@example.com.",
+  "expected": "lookup_order"
+ },
+ {
+  "id": "q06",
+  "query": "Marie (marie@example.com) veut savoir quand arrive CMD-10002.",
+  "expected": "lookup_order"
+ },
+ {
+  "id": "q07",
+  "query": "Quelle est la date de la commande CMD-10006 de marie@example.com ?",
+  "expected": "lookup_order"
+ },
+ {
+  "id": "q08",
+  "query": "Montre-moi toutes les commandes de marie@example.com.",
+  "expected": "find_orders"
+ },
+ {
+  "id": "q09",
+  "query": "Quelles commandes de paul@example.com sont déjà livrées ?",
+  "expected": "find_orders"
+ },
+ {
+  "id": "q10",
+  "query": "Liste les commandes en cours d'expédition de marie@example.com.",
+  "expected": "find_orders"
+ },
+ {
+  "id": "q11",
+  "query": "Est-ce que nadia@example.com a déjà passé commande chez nous ?",
+  "expected": "find_orders"
+ },
+ {
+  "id": "q12",
+  "query": "Historique d'achats de lea@example.com, s'il te plaît.",
+  "expected": "find_orders"
+ },
+ {
+  "id": "q13",
+  "query": "Combien de commandes annulées pour marie@example.com ?",
+  "expected": "find_orders"
+ },
+ {
+  "id": "q14",
+  "query": "Donne-moi les commandes de paul@example.com encore en préparation.",
+  "expected": "find_orders"
+ },
+ {
+  "id": "q15",
+  "query": "Quelles commandes contiennent un casque Bluetooth ?",
+  "expected": "search_orders"
+ },
+ {
+  "id": "q16",
+  "query": "Cherche les commandes d'octobre 2026 avec une souris sans fil.",
+  "expected": "search_orders"
+ },
+ {
+  "id": "q17",
+  "query": "Qui a acheté un chargeur 30 W ? Je ne connais ni le client ni le numéro.",
+  "expected": "search_orders"
+ },
+ {
+  "id": "q18",
+  "query": "Retrouve les commandes de housses d'ordinateur passées depuis le 20 octobre.",
+  "expected": "search_orders"
+ },
+ {
+  "id": "q19",
+  "query": "Y a-t-il des commandes de clavier mécanique dans la base ?",
+  "expected": "search_orders"
+ },
+ {
+  "id": "q20",
+  "query": "Sors-moi les commandes de câbles USB-C de septembre 2026.",
+  "expected": "search_orders"
+ }
+]

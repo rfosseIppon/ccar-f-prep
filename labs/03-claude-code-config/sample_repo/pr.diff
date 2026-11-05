@@ -1,0 +1,25 @@
+diff --git a/src/api/invoices.py b/src/api/invoices.py
+index 7cc0879..ca841b1 100644
+--- a/src/api/invoices.py
++++ b/src/api/invoices.py
+@@ -11,3 +11,8 @@ def get_invoice(db: sqlite3.Connection, invoice_id: int) -> dict | None:
+ def discounted_total(db: sqlite3.Connection, invoice_id: int, rate: float) -> float:
+     invoice = get_invoice(db, invoice_id)
+     return apply_discount(invoice["total"], rate)
++
++
++def search_invoices(db: sqlite3.Connection, customer_name: str) -> list:
++    query = f"SELECT id, total FROM invoices WHERE customer_name = '{customer_name}'"
++    return db.execute(query).fetchall()
+diff --git a/src/billing/discounts.py b/src/billing/discounts.py
+index ebef475..0010396 100644
+--- a/src/billing/discounts.py
++++ b/src/billing/discounts.py
+@@ -1,5 +1,5 @@
+-def apply_discount(total: float, rate: float) -> float:
++def apply_discount(total: float, rate: float, cap: float) -> float:
+     """Applique une remise (rate entre 0 et 1) à un total."""
+     if not 0 <= rate <= 1:
+         raise ValueError("rate doit être compris entre 0 et 1")
+-    return round(total * (1 - rate), 2)
++    return round(max(total * (1 - rate), total - cap), 2)

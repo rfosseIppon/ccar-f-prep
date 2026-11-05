@@ -1,0 +1,6 @@
+anthropic
+claude-agent-sdk
+mcp
+jsonschema
+pytest
+pyyaml

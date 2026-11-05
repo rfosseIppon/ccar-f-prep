@@ -1,0 +1,23 @@
+{
+  "description": "Une pull request fictive de trois fichiers. Réponses attendues : voir expected.",
+  "files": {
+    "billing.py": "@@ -1,3 +1,5 @@\n-def apply_discount(total: float, rate: float) -> float:\n-    return total * (1 - rate)\n+def apply_discount(total: float, rate: float, floor: float) -> float:\n+    discounted = total * (1 - rate)\n+    return max(discounted, floor)\n",
+    "invoice_api.py": "@@ -10,4 +10,12 @@\n def build_invoice(items, rate):\n     total = sum(i.amount for i in items)\n-    return {\"total\": total}\n+    return {\"total\": apply_discount(total, rate), \"currency\": \"EUR\"}\n+\n+def load_client(db, client_id):\n+    query = f\"SELECT * FROM clients WHERE id = {client_id}\"\n+    return db.execute(query).fetchone()\n",
+    "utils.py": "@@ -3,5 +3,6 @@\n-def fmt(x):\n+def format_amount(x):\n+    \"\"\"Formate un montant avec deux décimales.\"\"\"\n     return f\"{x:.2f}\"\n"
+  },
+  "expected": [
+    {
+      "file": "invoice_api.py",
+      "category": "security",
+      "why": "Injection SQL : l'identifiant client est inséré dans la requête par f-string."
+    },
+    {
+      "file": "invoice_api.py",
+      "category": "cross_file",
+      "why": "apply_discount exige maintenant un troisième argument (floor) : l'appel ne le fournit pas. Visible seulement en croisant billing.py et invoice_api.py."
+    }
+  ],
+  "must_ignore": [
+    "utils.py : renommage et docstring, aucun problème à signaler."
+  ]
+}
